@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/welcome_saraburger" />
+
+    <Button
+        android:id="@+id/showAll"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/addItem"
+        android:layout_alignRight="@+id/removeItem"
+        android:layout_below="@+id/searchItem"
+        android:text="@string/showAll" />
+
+    <Button
+        android:id="@+id/addItem"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp"
+        android:layout_toLeftOf="@+id/updateItem"
+        android:text="@string/add_item" />
+
+    <Button
+        android:id="@+id/searchItem"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/addItem"
+        android:layout_alignBottom="@+id/addItem"
+        android:layout_alignRight="@+id/welcome"
+        android:text="@string/search" />
+
+    <Button
+        android:id="@+id/removeItem"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/showAll"
+        android:layout_toRightOf="@+id/searchItem"
+        android:text="@string/remove" />
+
+    <Button
+        android:id="@+id/updateItem"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/showAll"
+        android:layout_toLeftOf="@+id/searchItem"
+        android:text="@string/update" />
+
+    <EditText
+        android:id="@+id/priceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/descriptionText"
+        android:layout_alignLeft="@+id/descriptionText"
+        android:ems="10"
+        android:hint="@string/price" />
+
+    <EditText
+        android:id="@+id/sizeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/priceText"
+        android:layout_alignLeft="@+id/priceText"
+        android:ems="10"
+        android:hint="@string/size" />
+
+    <EditText
+        android:id="@+id/categoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:hint="@string/category" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/foodText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/sizeText"
+        android:layout_alignLeft="@+id/categoryText"
+        android:ems="10"
+        android:hint="@string/food" />
+
+    <EditText
+        android:id="@+id/quantityText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addItem"
+        android:layout_alignLeft="@+id/foodText"
+        android:layout_marginBottom="42dp"
+        android:ems="10"
+        android:hint="@string/quantity"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/descriptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/quantityText"
+        android:layout_alignLeft="@+id/quantityText"
+        android:ems="10"
+        android:hint="@string/description" />
+
+</RelativeLayout>
